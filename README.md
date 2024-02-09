@@ -1,4 +1,4 @@
-This GitHub repository contains an implementation in C++ of a positively weighted tree. In this implementation, the nodes of the tree are defined as points on the plane, and the weight of the edges corresponds to the distance between the vertices.
+This repository contains an implementation in C++ of a positively weighted tree. In this implementation, the nodes of the tree are defined as points on the plane, and the weight of the edges corresponds to the distance between the vertices.
 
 The tree is represented using a map data structure, where each point in the plane is associated with a node. Each node has a parent, which is another point on the plane, and a map of children, where each child point is associated with a weight representing the distance between the parent and child.
 
