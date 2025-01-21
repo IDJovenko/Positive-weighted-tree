@@ -59,7 +59,7 @@ public:
     bool has_edge() const;
 
     /// Return weight of an edge between vertices (if there is any), throw an exception otherwise.
-    double edge_weight(point start_vertex, point end_vertex) const;
+    double get_weight(point start_vertex, point end_vertex) const;
 
     // TODO: Recursive removes the vertex and tree below it.
     //void remove_branch(point vertex);

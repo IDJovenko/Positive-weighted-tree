@@ -119,7 +119,7 @@ bool Tree::has_edge() const
     return false;
 }
 
-double Tree::edge_weight(point start_vertex, point end_vertex) const {
+double Tree::get_weight(point start_vertex, point end_vertex) const {
     const auto it_s = vertices.find(start_vertex);
     if (it_s == vertices.end()) {
         throw invalid_argument("Edge doesn't exist");

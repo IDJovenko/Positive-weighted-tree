@@ -45,7 +45,7 @@ TEST_CASE("[Tree] One edge", "[Tree]") {
     CHECK(g.has_vertex({ 1,1 }));
     CHECK(g.has_edge({ 0,0 }, { 1,1 }));
     CHECK_FALSE(g.has_edge({ 1,1 }, { 0,0 }));
-    CHECK(g.edge_weight({ 0,0 }, { 1,1 }) == 5.0);
+    CHECK(g.get_weight({ 0,0 }, { 1,1 }) == 5.0);
     CHECK_FALSE(g.has_edge({ 0,0 }, { 0,0 }));
 }
 
@@ -92,9 +92,9 @@ TEST_CASE("[Tree] Get adjacent vertices", "[Tree]") {
     CHECK(g.get_incoming_vertex({ 2,2 }) == point{ 0,0 });
     CHECK(g.get_incoming_vertex({ 3,3 }) == point{ 1,1 });
     CHECK(sorted(g.get_outgoing_vertices({ 4,4 })) == vector<point> {});
-    CHECK(g.edge_weight({ 1,1 }, { 3,3 }) == 3.0);
-    CHECK_THROWS(g.edge_weight({ 2,2 }, { 0,0 }) == 4.5);
-    CHECK_THROWS(g.edge_weight({ 0,0 }, { 3,3 }));
+    CHECK(g.get_weight({ 1,1 }, { 3,3 }) == 3.0);
+    CHECK_THROWS(g.get_weight({ 2,2 }, { 0,0 }) == 4.5);
+    CHECK_THROWS(g.get_weight({ 0,0 }, { 3,3 }));
 }
 
 TEST_CASE("[Tree] Get adjacent edges", "[Tree]") {
